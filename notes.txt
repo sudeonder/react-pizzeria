@@ -1,0 +1,9 @@
+> break the UI into components
+> build a static version (no state yet)
+
+
+>divide app into pages
+>divide app into feature categories 
+
+>services : reusable code to interact with the api
+>utils : helpers
