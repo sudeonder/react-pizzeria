@@ -1,7 +1,41 @@
+import  { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./ui/Home"
+import Menu from "./features/menu/Menu"
+import Cart from "./features/cart/Cart"
+import CreateOrder from "./features/order/CreateOrder"
+import Order from "./features/order/Order"
+
+const router = createBrowserRouter(
+  // this is a function where we define our routes
+  //in the below array each object is a route
+  [
+    {
+      path: '/',
+      element: <Home />
+    },
+    {
+      path: "/menu",
+      element: <Menu/>
+    },
+    {
+      path: "cart",
+      element: <Cart />
+    },
+    {
+      path: "/order/new", 
+      element: <CreateOrder/>
+    },
+    {
+      path: "/order/:orderId",
+      element: <Order />
+    }
+
+  ]
+)
+
+
 function App() {
-  return(
-    <div>hello world</div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
